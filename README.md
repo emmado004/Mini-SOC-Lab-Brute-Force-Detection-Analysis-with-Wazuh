@@ -1,2 +1,19 @@
 # Mini-SOC-Lab-Brute-Force-Detection-Analysis-with-Wazuh
 SOC Lab: Brute Force Detection with Wazuh SIEM. Configured Windows/Linux endpoints to monitor RDP &amp; SSH attacks. Simulated threats via Kali Linux, analyzed security events (PCI DSS, MITRE), and implemented logging hardening. Focused on Incident Response and security monitoring for Tier 1 Analyst.
+## This lab includes:
+- Ubuntu Server running Wazuh Manager
+  + OS: Ubuntu Live Server 24.04.4
+  + IP: 192.168.239.164/24 (VMnet8-NAT)
+  + Gateway: 192.168.239.2 (VMnet8-NAT)
+  + DNS: 8.8.8.8
+- Windows 8 victim machine
+  + OS: Windows 8.1 Pro
+  + IP: 192.168.239.163/24 (VMnet8-NAT)
+  + Gateway: 192.168.239.2 (VMnet8-NAT)
+  + DNS: 8.8.8.8
+- Kali Linux attacker machine
+  + OS: Linux
+  + IP: 192.168.239.128/24 (VMnet8-NAT)
+## Simulated attacks
+- SSH brute force attack against Ubuntu Server
+- RDP brute force attack against Windows 8
