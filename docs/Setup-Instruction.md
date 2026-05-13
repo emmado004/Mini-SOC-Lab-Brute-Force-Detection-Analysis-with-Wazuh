@@ -12,6 +12,11 @@
 curl -sO https://packages.wazuh.com/4.13/wazuh-install.sh && sudo bash wazuh-install.sh -a
 - Access the dashboard via https://192.168.239.164 - the IP Address on your host machine.
 - The Ubuntu Server (Manager) is monitored using Wazuh’s built-in self-monitoring feature. No additional agent installation was required, demonstrating the versatility of the Wazuh core in protecting the central SIEM infrastructure.
+- Enable SSH: sudo apt install openssh-server -y
+- In /var/ossec/etc/ossec.conf check if it has:
+<img width="892" height="122" alt="image" src="https://github.com/user-attachments/assets/ca6ac29a-9d88-4342-b942-dab96fa1be44" />
+
+- If don't have, add into then save and restart: sudo systemctl restart wazuh-manager
 ## Install Wazuh agent on Client
 ### Windows 8 (RDP Victim)
 - On Dashboard Wazuh manager, choose Agents management -> Deploy new agent
