@@ -25,7 +25,7 @@ SOC Lab: Brute Force Detection with Wazuh SIEM. Configured Windows/Linux endpoin
 <img width="302" height="129" alt="Architecture" src="https://github.com/user-attachments/assets/875876ac-3fc1-4664-8904-82cbc3dab07a" />
 
 ## Technologies Used
-- Wazuh SIEM
+- Wazuh SIEM v4.13.1
 - Ubuntu Server
 - Windows 8
 - Kali Linux
