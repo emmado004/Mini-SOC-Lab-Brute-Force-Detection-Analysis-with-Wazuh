@@ -17,3 +17,10 @@ SOC Lab: Brute Force Detection with Wazuh SIEM. Configured Windows/Linux endpoin
 ## Simulated attacks
 - SSH brute force attack against Ubuntu Server
 - RDP brute force attack against Windows 8
+<img width="302" height="129" alt="Architecture" src="https://github.com/user-attachments/assets/875876ac-3fc1-4664-8904-82cbc3dab07a" />
+
+## Objectives:
+- Collect logs using Wazuh agents
+- Detect brute force behavior
+- Investigate alerts through Wazuh dashboard
+- Produce incident reports similar to SOC Tier 1 workflow
