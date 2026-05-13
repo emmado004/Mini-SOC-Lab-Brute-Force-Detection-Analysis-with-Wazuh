@@ -22,7 +22,7 @@ SOC Lab: Brute Force Detection with Wazuh SIEM. Configured Windows/Linux endpoin
 ## Simulated attacks
 - SSH brute force attack against Ubuntu Server
 - RDP brute force attack against Windows 8
-<img width="302" height="129" alt="Architecture" src="https://github.com/user-attachments/assets/875876ac-3fc1-4664-8904-82cbc3dab07a" />
+<img width="303" height="130" alt="arch" src="https://github.com/user-attachments/assets/c1dbecf5-b56f-4146-8730-8d725d044640" />
 
 ## Technologies Used
 - Wazuh SIEM v4.13.1
