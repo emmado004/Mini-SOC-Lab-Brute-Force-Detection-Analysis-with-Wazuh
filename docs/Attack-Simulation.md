@@ -25,3 +25,16 @@ hydra -l administrator -P password.txt ssh://192.168.239.164
 
 > The `-t` (thread) parameter is not used here to allow Hydra to run with default settings, which is sufficient to trigger Wazuh without crashing the SSH service.
 <img width="897" height="326" alt="image" src="https://github.com/user-attachments/assets/01763d0c-7698-42b1-8fa5-062ad45b4e0c" />
+
+### Triggered Wazuh Alerts
+| Order | Rule ID | Level | Description |
+|--------|---------|-------|-------|
+| 1 | 5503 | 5 | PAM: User login failed |
+| 2 | 5551 | 10 | PAM: Multiple failed logins in a small period |
+| 3 | 5760 | 5 | sshd: Authentication failed |
+| 4 | 5763 | 10 | sshd: Brute force trying to get access |
+| 5 | **40112** | **12** | **Multiple auth failures followed by a success** ← key |
+| 6 | 5501 | 3 | PAM: Login session opened |
+| 7 | 5502 | 3 | PAM: Login session closed |
+
+Rule 40112 (Level 12) is the highest severity in this chain. Wazuh does not merely record individual events; it automatically correlates the entire sequence of failures followed by a single success to conclude that the **"brute-force succeeded"** --> alert requires escalation to Tier 2
