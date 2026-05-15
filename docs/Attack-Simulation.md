@@ -38,3 +38,6 @@ hydra -l administrator -P password.txt ssh://192.168.239.164
 | 7 | 5502 | 3 | PAM: Login session closed |
 
 Rule 40112 (Level 12) is the highest severity in this chain. Wazuh does not merely record individual events; it automatically correlates the entire sequence of failures followed by a single success to conclude that the **"brute-force succeeded"** --> alert requires escalation to Tier 2
+
+<img width="1847" height="785" alt="image" src="https://github.com/user-attachments/assets/15986d74-0d8f-45e5-bada-6bd67139f7ac" />
+
