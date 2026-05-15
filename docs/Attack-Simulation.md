@@ -41,3 +41,33 @@ Rule 40112 (Level 12) is the highest severity in this chain. Wazuh does not mere
 
 <img width="1847" height="785" alt="image" src="https://github.com/user-attachments/assets/15986d74-0d8f-45e5-bada-6bd67139f7ac" />
 
+### MITRE mapping
+| rule.mitre.id | Tactic | Trigger |
+|---|---|---|
+| T1110.001 | Credential Access | Rule 5503, 5760 — failed attempts |
+| T1110 | Credential Access | Rule 5551, 5763, 40112 — pattern + success |
+| T1021.004 | Lateral Movement | Rule 5760 — SSH as access vector |
+| T1078 | Initial Access, Persistence | Rule 5501, 40112 — valid account used |
+
+## Scenario 02 — RDP Brute Force against Windows 8
+### Technical Objective
+To verify that the Wazuh agent on Windows accurately records and transmits alerts to the SIEM during an RDP brute-force attack, specifically detecting privileged account logons following a series of failures.
+### Tools
+- **Hydra** — brute-force tool
+- **password.txt** — Custom wordlist
+
+### Execution Command
+
+```bash
+hydra -l win8 -P password.txt rdp://192.168.239.163 -t 1 -V
+```
+
+| Parameter | Value | Description |
+|---------|---------|---------|
+| `-l` | `win8` |Target Username: `win8` |
+| `-P` | `password.txt` | Wordlist brute-force |
+| `rdp://` | `192.168.239.163` | Protocol RDP, target Windows 8 |
+| `-t 1` | 1 thread | Limits to 1 thread as RDP is unstable with multi-threading |
+| `-V` | — | Verbose — displays every attempt for real-time tracking |
+
+> `-t 1` is mandatory for RDP. Multi-threading often causes connection errors and unstable results—this is a specific characteristic of the RDP protocol.
