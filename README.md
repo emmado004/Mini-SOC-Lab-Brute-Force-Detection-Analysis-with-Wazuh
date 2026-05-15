@@ -34,5 +34,10 @@ SOC Lab: Brute Force Detection with Wazuh SIEM. Configured Windows/Linux endpoin
 - RDP
 - Linux authentication logs
 - Windows Event Logs
+## Attack Scenarios
+| # | Scenario | Target | Tool | MITRE Technique | Key Alert | Severity |
+|---|----------|--------|------|-----------------|-----------|----------|
+| 01 | SSH Brute Force | Ubuntu :22 | Hydra | [T1110.001](https://attack.mitre.org/techniques/T1110/001/)  [T1078](https://attack.mitre.org/techniques/T1078/) | Rule 40112 (Level 12) | 🔴 Critical |
+| 02 | RDP Brute Force | Win8 :3389 | Hydra | [T1110.001](https://attack.mitre.org/techniques/T1110/001/)  [T1021.001](https://attack.mitre.org/techniques/T1021/001/) | Rule 67028 + 60106 | 🟠 High |
 ## Project Structure
 Explore documentation in the /docs folder for setup, architecture, and lessons learned.
