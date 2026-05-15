@@ -81,3 +81,10 @@ hydra -l win8 -P password.txt rdp://192.168.239.163 -t 1 -V
 | 4 | **67028** | 3 | **Special privileges assigned to new logon** ← compromise confirmed |
 | 5 | 60106 | 3 | Windows Logon Success |
 | 6 | 60137 | 3 | Windows User Logoff |
+
+### MITRE mapping
+| Technique ID | Tactic | Trigger |
+|---|---|---|
+| T1531 | Impact | Rule 60122 — Logon failures |
+| T1484 | Defense Evasion, Privilege Escalation | Rule 67028 — Special privileges |
+| T1078 | Initial Access, Persistence, Defense Evasion | Rule 60106, 67028 — valid account used |
