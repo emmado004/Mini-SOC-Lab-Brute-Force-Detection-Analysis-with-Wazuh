@@ -71,3 +71,13 @@ hydra -l win8 -P password.txt rdp://192.168.239.163 -t 1 -V
 | `-V` | — | Verbose — displays every attempt for real-time tracking |
 
 > `-t 1` is mandatory for RDP. Multi-threading often causes connection errors and unstable results—this is a specific characteristic of the RDP protocol.
+### Wazuh alerts trigger được
+
+| Order | Rule ID | Level | Description |
+|--------|---------|-------|-------|
+| 1 | 60104 | — | Windows Audit Failure |
+| 2 | 60122 | — | Logon Failure — unknown user or bad password |
+| 3 | 60602 | — | Windows Application Error (side effect) |
+| 4 | **67028** | — | **Special privileges assigned to new logon** ← compromise confirmed |
+| 5 | 60106 | — | Windows Logon Success |
+| 6 | 60137 | — | Windows User Logoff |
