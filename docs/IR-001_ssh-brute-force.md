@@ -2,7 +2,7 @@
 
 | Field | Details |
 |-------|---------|
-| **Date** | 2025-XX-XX |
+| **Date** | 2025-05-15 |
 | **Time** | 15:16 (UTC+7) |
 | **Severity** | Critical |
 | **Status** | Confirmed Compromise — Simulated Lab Environment |
