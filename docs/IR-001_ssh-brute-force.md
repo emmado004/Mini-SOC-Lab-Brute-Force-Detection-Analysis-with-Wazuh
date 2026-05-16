@@ -74,7 +74,7 @@ failures followed by one success and concludes the brute-force attack
 succeeded. This is the highest-severity alert in this incident and the
 primary escalation trigger for a SOC Tier 1 analyst.
 
-![Wazuh Threat Hunting - SSH](..wazuh-ssh-threat-hunting-figure1.md)
+![Wazuh Threat Hunting - SSH](../wazuh-ssh-threat-hunting-figure1.md)
 *Figure 1: Alert chain at 15:53 — escalation from Rule 5503 to Rule 40112*
 
 ![Wazuh MITRE ATT&CK - SSH](../evidence/wazuh-ssh-mitre.png)
