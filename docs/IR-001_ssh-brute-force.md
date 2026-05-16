@@ -35,15 +35,15 @@ logs, disable agents, or establish persistence undetected.
 
 | Time | Rule ID | Level | Event | Significance |
 |------|---------|-------|-------|--------------|
-| 15:53 | 5503 | — | PAM: User login failed | Hydra begins iterating wordlist |
-| 15:53 | 5551 | 10 | PAM: Multiple failed logins in a small period | Wazuh detects abnormal login frequency |
-| 15:53 | 5760 | — | sshd: Authentication failed | sshd confirms each failed attempt |
-| 15:53 | 5763 | 10 | sshd: Brute force trying to get access | Wazuh identifies deliberate brute-force pattern |
-| 15:53 | **40112** | **12** | **Multiple auth failures followed by a success** | **Brute-force confirmed successful — compromise verified** |
-| 15:53 | 5501 | — | PAM: Login session opened | Attacker gains shell access on Ubuntu Server |
-| 15:53 | 5502 | — | PAM: Login session closed | SSH session terminated |
+| 15:16 | 5503 | — | PAM: User login failed | Hydra begins iterating wordlist |
+| 15:16 | 5551 | 10 | PAM: Multiple failed logins in a small period | Wazuh detects abnormal login frequency |
+| 15:16 | 5760 | — | sshd: Authentication failed | sshd confirms each failed attempt |
+| 15:16 | 5763 | 10 | sshd: Brute force trying to get access | Wazuh identifies deliberate brute-force pattern |
+| 15:16 | **40112** | **12** | **Multiple auth failures followed by a success** | **Brute-force confirmed successful — compromise verified** |
+| 15:16 | 5501 | — | PAM: Login session opened | Attacker gains shell access on Ubuntu Server |
+| 15:16 | 5502 | — | PAM: Login session closed | SSH session terminated |
 
-> The entire chain occurred within a single minute at 15:53. Compressed
+> The entire chain occurred within a single minute at 15:16. Compressed
 > timestamps are a characteristic of automated tooling (Hydra) and serve
 > as a primary IOC distinguishing this from a legitimate forgotten-password
 > scenario.
@@ -75,9 +75,9 @@ succeeded. This is the highest-severity alert in this incident and the
 primary escalation trigger for a SOC Tier 1 analyst.
 
 ![Wazuh Threat Hunting - SSH](picture/wazuh-ssh-threat-hunting-figure1.md)
-*Figure 1: Alert chain at 15:53 — escalation from Rule 5503 to Rule 40112*
+*Figure 1: Alert chain at 15:16 — escalation from Rule 5503 to Rule 40112*
 
-![Wazuh MITRE ATT&CK - SSH](../evidence/wazuh-ssh-mitre.png)
+![Wazuh MITRE ATT&CK - SSH](picture/wazuh-ssh-threat-hunting-figure2.md)
 *Figure 2: MITRE ATT&CK mapping on Wazuh dashboard*
 
 ---
