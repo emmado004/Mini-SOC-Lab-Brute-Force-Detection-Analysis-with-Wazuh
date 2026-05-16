@@ -3,7 +3,7 @@
 | Field | Details |
 |-------|---------|
 | **Date** | 2025-XX-XX |
-| **Time** | 15:53 (UTC+7) |
+| **Time** | 15:16 (UTC+7) |
 | **Severity** | Critical |
 | **Status** | Confirmed Compromise — Simulated Lab Environment |
 | **Analyst** | [Your Name] |
@@ -13,7 +13,7 @@
 
 ## Executive Summary
 
-At 15:53, Wazuh SIEM detected and confirmed a brute-force attack against the
+At 15:16, Wazuh SIEM detected and confirmed a brute-force attack against the
 SSH service on Ubuntu Server (192.168.239.164). The attacker, operating from
 Kali Linux, used Hydra to repeatedly attempt authentication against the
 `administrator` account using a password wordlist.
