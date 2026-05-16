@@ -61,6 +61,8 @@ To verify that the Wazuh agent on Windows accurately records and transmits alert
 ```bash
 hydra -l win8 -P password.txt rdp://192.168.239.163 -t 1 -V
 ```
+<img width="666" height="392" alt="image" src="https://github.com/user-attachments/assets/df3e34f2-e55c-4475-8607-8f2c37cdf6d5" />
+
 
 | Parameter | Value | Description |
 |---------|---------|---------|
